@@ -18,17 +18,17 @@ public class Catalog {
 
     public boolean addStudent(Student student){
         for(Student s : this.student){
-            if(!s.equals(student)){
-                this.student.add(student);
-                return true;
+            if(s.equals(student)){
+                return false;
             }
         }
-        return false;
+        this.student.add(student);
+        return true;
     }
   
-    public void printGradesByStudent(Student pupile) {
+    public void printGrades(Student pupil) {
         for (Student st: student) {
-            if (st.equals(pupile)) {
+            if (st.equals(pupil)) {
                 st.printAllGrades(); //TBD issue#19
             }
         }
@@ -42,4 +42,13 @@ public class Catalog {
         }
     }
 
+    public void printGrades(Subject subject){
+        for(Student sub : this.student){
+            sub.printAllGrades(subject);
+        }
+    }
+  
+    public boolean removeStudent(Student pupil) {
+        return this.student.remove(pupil);
+    }
 }

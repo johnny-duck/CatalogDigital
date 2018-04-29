@@ -47,11 +47,30 @@ public class Student {
         average = sum / subject.size();
         return average;
     }
-    
+
     public void printAllGrades() {
         System.out.println("Grades for " + this.name + ": ");
         for (Subject subj : this.subject) {
-            subj.printGrades(); //TBD issue#22
+            subj.printGrades();
         }
+    }
+
+    public void printAllGrades(Subject subject) {
+        System.out.println("Grades for " + this.name + " at " + subject + ": ");
+        for (Subject subj : this.subject) {
+            if(subj.equals(subject)) {
+                subj.printGrades();
+            }
+        }
+    }
+
+    public boolean addSubject(Subject newSubject) {
+        for (Subject subj: this.subject) {
+            if (subj.equals(newSubject)) {
+                return false;
+            }
+        }
+        this.subject.add(newSubject);
+        return true;
     }
 }
