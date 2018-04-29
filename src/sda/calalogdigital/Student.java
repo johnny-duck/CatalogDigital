@@ -51,7 +51,16 @@ public class Student {
     public void printAllGrades() {
         System.out.println("Grades for " + this.name + ": ");
         for (Subject subj : this.subject) {
-            subj.printGrades(); //TBD issue#22
+            subj.printGrades();
+        }
+    }
+
+    public void printAllGrades(Subject subject) {
+        System.out.println("Grades for " + this.name + " at " + subject + ": ");
+        for (Subject subj : this.subject) {
+            if(subj.equals(subject)) {
+                subj.printGrades();
+            }
         }
     }
 

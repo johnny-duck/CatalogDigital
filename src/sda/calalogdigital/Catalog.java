@@ -36,7 +36,7 @@ public class Catalog {
 
     public void printGrades(Subject subject){
         for(Student sub : this.student){
-            sub.printAllGrades(subject); //TODO issue
+            sub.printAllGrades(subject);
         }
     }
 
