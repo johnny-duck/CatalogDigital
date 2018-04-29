@@ -26,11 +26,17 @@ public class Catalog {
         return false;
     }
   
-    public void printGradesByStudent(Student pupile) {
+    public void printGrades(Student pupile) {
         for (Student st: student) {
             if (st.equals(pupile)) {
                 st.printAllGrades(); //TBD issue#19
             }
+        }
+    }
+
+    public void printGrades(Subject subject){
+        for(Student sub : this.student){
+            sub.printAllGrades(subject); //TODO issue
         }
     }
 
