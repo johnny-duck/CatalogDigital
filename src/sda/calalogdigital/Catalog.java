@@ -1,8 +1,10 @@
 package sda.calalogdigital;
 
+import java.util.List;
+
 public class Catalog {
 
-    private Student student;
+    private List<Student> student;
     private Subject subject;
     private Grade grade;
 
