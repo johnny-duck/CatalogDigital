@@ -46,5 +46,11 @@ public class Student {
         }
         average = sum/subject.size();
         return average;
+
+    public void printAllGrades() {
+        System.out.println("Grades for " + this.name + ": ");
+        for (Subject subj : this.subject) {
+            subj.printGrades(); //TBD issue#22
+        }
     }
 }
