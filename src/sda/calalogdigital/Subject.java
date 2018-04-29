@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class Subject {
 
-    String name;
-    List<Grade> grade;
+    private String name;
+    private List<Grade> grade;
 
     public Subject(String name)
     {
