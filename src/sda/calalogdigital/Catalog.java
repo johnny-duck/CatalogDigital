@@ -5,18 +5,13 @@ import java.util.List;
 public class Catalog {
 
     private List<Student> student;
-    private Subject subject;
-    private Grade grade;
+    String numeClasa;
 
     public Student getStudent() {
         return student;
     }
 
-    public Subject getSubject() {
-        return subject;
-    }
-
-    public Grade getGrade() {
-        return grade;
+    public String getNumeClasa() {
+        return numeClasa;
     }
 }
