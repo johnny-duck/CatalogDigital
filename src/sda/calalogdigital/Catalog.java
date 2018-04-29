@@ -16,6 +16,16 @@ public class Catalog {
         return numeClasa;
     }
 
+    public boolean addStudent(Student student){
+        for(Student s : this.student){
+            if(!s.equals(student)){
+                this.student.add(student);
+                return true;
+            }
+        }
+        return false;
+    }
+  
     public void printGradesByStudent(Student pupile) {
         for (Student st: student) {
             if (st.equals(pupile)) {
