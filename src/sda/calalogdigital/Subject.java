@@ -1,6 +1,7 @@
 package sda.calalogdigital;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 
@@ -34,6 +35,16 @@ public class Subject {
         }
         average = sum/grade.size();
         return average;
+    }
+
+    public void printGrades() {
+        System.out.println(this.getName() + ": ");
+        for(Grade gr : this.grade) {
+            System.out.println("- " + gr.getValue() + " - "
+                    + gr.getDate().get(Calendar.DAY_OF_MONTH) + "."
+                    + gr.getDate().get(Calendar.MONTH) + "."
+                    + gr.getDate().get(Calendar.YEAR));
+        }
     }
 
     @Override
