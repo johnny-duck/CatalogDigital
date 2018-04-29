@@ -5,11 +5,7 @@ import java.util.List;
 public class Catalog {
 
     private List<Student> student;
-    String numeClasa;
-
-    public Student getStudent() {
-        return student;
-    }
+    private String numeClasa;
 
     public String getNumeClasa() {
         return numeClasa;
