@@ -18,12 +18,12 @@ public class Catalog {
 
     public boolean addStudent(Student student){
         for(Student s : this.student){
-            if(!s.equals(student)){
-                this.student.add(student);
-                return true;
+            if(s.equals(student)){
+                return false;
             }
         }
-        return false;
+        this.student.add(student);
+        return true;
     }
   
     public void printGrades(Student pupile) {
@@ -39,5 +39,4 @@ public class Catalog {
             sub.printAllGrades(subject);
         }
     }
-
 }
