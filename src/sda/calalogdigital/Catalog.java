@@ -34,6 +34,14 @@ public class Catalog {
         }
     }
 
+    public void printByGenAverageLowerThan(double avg){
+        for(Student s : this.student){
+            if(s.calcGeneralAverage()<avg){
+                s.printAllGrades();
+            }
+        }
+    }
+
     public void printGrades(Subject subject){
         for(Student sub : this.student){
             sub.printAllGrades(subject);
