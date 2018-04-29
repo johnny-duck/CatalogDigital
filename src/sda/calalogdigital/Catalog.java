@@ -26,9 +26,9 @@ public class Catalog {
         return true;
     }
   
-    public void printGrades(Student pupile) {
+    public void printGrades(Student pupil) {
         for (Student st: student) {
-            if (st.equals(pupile)) {
+            if (st.equals(pupil)) {
                 st.printAllGrades(); //TBD issue#19
             }
         }
@@ -38,5 +38,9 @@ public class Catalog {
         for(Student sub : this.student){
             sub.printAllGrades(subject);
         }
+    }
+  
+    public boolean removeStudent(Student pupil) {
+        return this.student.remove(pupil);
     }
 }
