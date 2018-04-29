@@ -38,15 +38,16 @@ public class Student {
         return Objects.hash(name, fatherInit);
     }
 
-    public double calcGeneralAverage(){
+    public double calcGeneralAverage() {
         double sum = 0;
         double average;
-        for(int i=0; i<=subject.size(); ++i){
+        for (int i = 0; i <= subject.size(); ++i) {
             sum += subject.get(i).calcAverage();
         }
-        average = sum/subject.size();
+        average = sum / subject.size();
         return average;
-
+    }
+    
     public void printAllGrades() {
         System.out.println("Grades for " + this.name + ": ");
         for (Subject subj : this.subject) {
